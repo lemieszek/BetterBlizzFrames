@@ -2,6 +2,9 @@
 ## Retail
 ### Tweak
 - Update Nahj profile (www.twitch.tv/nahj)
+## TBC
+### Tweak
+- Add missing kick spell id for LossOfControl
 
 # BetterBlizzFrames 2.0.1b
 ## Classic Era/SoD
