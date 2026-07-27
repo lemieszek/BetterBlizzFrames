@@ -1,4 +1,9 @@
 # BetterBlizzFrames 2.0.1b
+## Retail
+### Tweak
+- Update Nahj profile (www.twitch.tv/nahj)
+
+# BetterBlizzFrames 2.0.1b
 ## Classic Era/SoD
 ### Tweak
 - Remove Era Player Castbar Moving in BetterBlizzFrames since it now exists in Edit Mode. Use Edit Mode instead.
