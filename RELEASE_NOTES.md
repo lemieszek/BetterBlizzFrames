@@ -6,7 +6,7 @@
 - "Cast On Me Highlight" setting in Castbars section. Red highlight around castbar when the cast is being casted on you (true target, no macro workaround)
 ## Midnight
 ### Bugfix
-- Fix castbars showing normal cast/channel texture on an uninterruptible cast with certain specific settings.
+- Fix castbars showing normal cast/channel texture on an uninterruptible cast with certain specific settings. (2.0.1d: fix a missing check causing lua errors)
 
 # BetterBlizzFrames 2.0.1b
 ## Retail
