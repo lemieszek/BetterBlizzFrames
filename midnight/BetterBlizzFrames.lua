@@ -3752,7 +3752,7 @@ function BBF.HookUnitFrameTextures()
                         local notInterruptible
                         local sbTex = self:GetStatusBarTexture()
                         if self.channeling then
-                            notInterruptible = select(7, UnitChannelInfo(statusBar.unit))
+                            notInterruptible = statusBar.unit and select(7, UnitChannelInfo(statusBar.unit))
                             if notInterruptible ~= nil then
                                 sbTex:SetVertexColorFromBoolean(
                                     notInterruptible,
@@ -3763,7 +3763,7 @@ function BBF.HookUnitFrameTextures()
                                 self:SetStatusBarColor(0, 1, 0)
                             end
                         else
-                            notInterruptible = select(8, UnitCastingInfo(statusBar.unit))
+                            notInterruptible = statusBar.unit and select(8, UnitCastingInfo(statusBar.unit))
                             if notInterruptible ~= nil then
                                 sbTex:SetVertexColorFromBoolean(
                                     notInterruptible,
