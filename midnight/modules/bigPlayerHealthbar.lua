@@ -1,5 +1,4 @@
 -- Big Healthbar (No Portrait): the PlayerFrame health bar takes over the mana slot.
-
 -- Blizzard's player-bars heights: health 19, mana 10, 1px gap.
 -- Mask is noPortrait's portrait-off mask (uipartyframeportraitoffhealthmask, 190x34);
 local HEALTHBAR_HEIGHT = 19
@@ -50,9 +49,15 @@ local function Apply()
     GrowBar()
     PlayerMaskOffset()
     BBF.UpdateNoPortraitText(PlayerFrame, "player")
+    if not UnitInVehicle("player") then
+        PlayerFrame:UnregisterEvent("UNIT_ENTERED_VEHICLE")
+        PlayerFrame:UnregisterEvent("UNIT_EXITING_VEHICLE")
+        PlayerFrame:UnregisterEvent("UNIT_EXITED_VEHICLE")
+    end
 end
 
 local hooked = false
+
 local function EnsureHooks()
     if hooked then
         return
@@ -68,9 +73,7 @@ local function EnsureHooks()
         Apply()
         VehicleMaskOffset()
     end)
-    PlayerFrame:UnregisterEvent("UNIT_ENTERED_VEHICLE")
-    PlayerFrame:UnregisterEvent("UNIT_EXITING_VEHICLE")
-    PlayerFrame:UnregisterEvent("UNIT_EXITED_VEHICLE")
+    AlternatePowerBar:UnregisterEvent("UNIT_DISPLAYPOWER")
 end
 
 function BBF.UpdateBigPlayerHealthbar()
